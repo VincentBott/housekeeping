@@ -15,9 +15,7 @@ public class HouseApp
 
         CleaningService jill = ctx.getBean("jill", CleaningService.class);
 
-
         CleaningService jane = ctx.getBean("jane", CleaningService.class);
-
 
         CleaningService richard = ctx.getBean("richard", CleaningService.class);
 

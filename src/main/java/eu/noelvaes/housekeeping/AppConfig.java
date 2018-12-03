@@ -2,15 +2,14 @@ package eu.noelvaes.housekeeping;
 
 
 import eu.noelvaes.housekeeping.services.*;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Lazy;
-import org.springframework.context.annotation.Scope;
+import org.springframework.context.annotation.*;
 
 
 @Configuration
+@ComponentScan
 public class AppConfig {
 
+/*
     @Bean
     public LawnMower lawnmower() {
         return new LawnMower();
@@ -34,7 +33,6 @@ public class AppConfig {
         return new Sponge();
     }
 
-
     @Bean
     @Lazy
     public CleaningService jill() {
@@ -51,7 +49,6 @@ public class AppConfig {
         return cs;
     }
 
-
     @Bean
     @Lazy
     public CleaningService richard() {
@@ -59,4 +56,5 @@ public class AppConfig {
         cs.setCleaningTool(sponge());
         return cs;
     }
+    */
 }
