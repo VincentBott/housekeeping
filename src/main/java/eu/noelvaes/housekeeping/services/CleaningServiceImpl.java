@@ -10,6 +10,7 @@ public class CleaningServiceImpl implements CleaningService {
         this.tool = tool;
     }
 
+
     @Override
     public void clean() {
         System.out.println("Cleaning the house.");

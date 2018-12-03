@@ -22,7 +22,10 @@ public class HouseApp
         CleaningService richard = ctx.getBean("richard", CleaningService.class);
 
 
+        // for(int )
+
         jill.clean();
+
         jane.clean();
         richard.clean();
 
