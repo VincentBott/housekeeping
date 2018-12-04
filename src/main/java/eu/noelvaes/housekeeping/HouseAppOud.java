@@ -9,7 +9,7 @@ public class HouseAppOud
     public static void main( String[] args )
     {
         CleaningTool broom = new Broom();
-        CleaningTool vacuum = new Vacuumcleaner();
+        CleaningTool vacuum = new VacuumCleaner();
         CleaningTool sponge = new Sponge();
 
         CleaningServiceImpl jill = new CleaningServiceImpl();

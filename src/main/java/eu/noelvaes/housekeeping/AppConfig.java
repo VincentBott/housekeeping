@@ -9,6 +9,8 @@ import org.springframework.context.annotation.*;
 @ComponentScan
 public class AppConfig {
 
+
+}
 /*
     @Bean
     public LawnMower lawnmower() {
@@ -57,4 +59,4 @@ public class AppConfig {
         return cs;
     }
     */
-}
+

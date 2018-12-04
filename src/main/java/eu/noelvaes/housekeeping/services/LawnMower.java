@@ -1,20 +1,12 @@
 package eu.noelvaes.housekeeping.services;
 
-
-import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
 @Component
+@Profile("smallHouse")
 public class LawnMower implements GardeningTool {
-
-
-    public LawnMower() {
-        System.out.println("Ik ben de lawnmower.");
-    }
-
-
-    @Override
-    public void doGardenJob() {
-        System.out.println("Ik rij het gras af.");
-    }
+	public void doGardenJob() {
+		System.out.println("Mowing the lawn");
+	}
 }

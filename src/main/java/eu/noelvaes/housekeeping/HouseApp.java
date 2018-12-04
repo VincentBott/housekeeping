@@ -1,33 +1,33 @@
 package eu.noelvaes.housekeeping;
 
 
-import eu.noelvaes.housekeeping.services.*;
-import org.springframework.context.ConfigurableApplicationContext;
+import eu.noelvaes.housekeeping.services.DomesticService;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 
-public class HouseApp
-{
-    public static void main( String[] args )
-    {
+public class HouseApp {
 
-        ConfigurableApplicationContext ctx = new AnnotationConfigApplicationContext(AppConfig.class);
-
-        CleaningService jill = ctx.getBean("jill", CleaningService.class);
-
-        CleaningService jane = ctx.getBean("jane", CleaningService.class);
-
-        CleaningService richard = ctx.getBean("richard", CleaningService.class);
+    public static void main(String[] args) {
 
 
-        // for(int )
+        try (
+                AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(
+                        AppConfig.class)) {
 
-        jill.clean();
 
-        jane.clean();
-        richard.clean();
+            ctx.getEnvironment().setActiveProfiles("smallHouse");
 
-        ctx.close();
+            // ctx.getEnvironment().setActiveProfiles("bigHouse");
+
+            ctx.register(AppConfig.class);
+
+            ctx.refresh();
+
+            System.out.println("Container initialized");
+
+            DomesticService service = ctx.getBean("domesticService", DomesticService.class);
+
+            service.runHousehold();
+        }
     }
 }
-
